@@ -13,9 +13,9 @@ public class Paiement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPalement;
+    private Long idPaiement;
 
-    private Double montant;
+    private java.math.BigDecimal montant;
 
     private java.time.LocalDate datePaiement;
 
