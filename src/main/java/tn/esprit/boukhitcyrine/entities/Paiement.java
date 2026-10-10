@@ -23,6 +23,5 @@ public class Paiement {
     private ModePaiement modePaiement;
 
     @ManyToOne
-    @JoinColumn(name = "idContrat")
     private Contrat contrat;
 }

@@ -3,6 +3,7 @@ package tn.esprit.boukhitcyrine.entities;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -10,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
 public class Agence {
 
     @Id
@@ -21,9 +23,9 @@ public class Agence {
     private String adresse;
     private String telephone;
 
-    @OneToMany(mappedBy = "agence", cascade = CascadeType.ALL)
-    private List<Employe> employes;
+    @OneToMany(mappedBy = "agence", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    private Set<Employe> employes;
 
-    @OneToMany(mappedBy = "agence", cascade = CascadeType.ALL)
-    private List<Vehicule> vehicules;
+    @OneToMany(mappedBy = "agence", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    private Set<Vehicule> vehicules;
 }

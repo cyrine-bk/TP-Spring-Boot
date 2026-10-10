@@ -23,13 +23,11 @@ public class Reservation {
     private StatutReservation statut;
 
     @ManyToOne
-    @JoinColumn(name = "idClient")
     private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "idVehicule")
     private Vehicule vehicule;
 
-    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "reservation", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private Contrat contrat;
 }

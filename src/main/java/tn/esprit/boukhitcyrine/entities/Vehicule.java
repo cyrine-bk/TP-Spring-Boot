@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -30,20 +31,14 @@ public class Vehicule {
     private StatutVehicule statut;
 
     @ManyToOne
-    @JoinColumn(name = "idAgence")
     private Agence agence;
 
-    @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL)
-    private List<Maintenance> maintenances;
+    @OneToMany(mappedBy = "vehicule", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    private Set<Maintenance> maintenances;
 
     @ManyToMany
-    @JoinTable(
-        name = "vehicule_equipement",
-        joinColumns = @JoinColumn(name = "idVehicule"),
-        inverseJoinColumns = @JoinColumn(name = "idEquipement")
-    )
-    private List<Equipement> equipements;
+    private Set<Equipement> equipements;
 
     @OneToMany(mappedBy = "vehicule")
-    private List<Reservation> reservations;
+    private Set<Reservation> reservations;
 }
