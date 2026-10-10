@@ -1,11 +1,11 @@
-package tn.esprit.boukhitcyrine.services.impl;
+package tn.esprit.boukhitcyrine.service.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import tn.esprit.boukhitcyrine.entities.Client;
 import tn.esprit.boukhitcyrine.repository.ClientRepository;
-import tn.esprit.boukhitcyrine.services.IClientService;
+import tn.esprit.boukhitcyrine.service.interfaces.IClientService;
 
 import java.util.Set;
 import java.util.HashSet;

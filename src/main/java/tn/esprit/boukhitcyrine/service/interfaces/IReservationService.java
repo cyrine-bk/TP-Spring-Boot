@@ -1,4 +1,4 @@
-package tn.esprit.boukhitcyrine.services;
+package tn.esprit.boukhitcyrine.service.interfaces;
 
 import tn.esprit.boukhitcyrine.entities.Reservation;
 import java.util.Set;

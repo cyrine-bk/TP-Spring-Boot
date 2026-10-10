@@ -1,11 +1,11 @@
-package tn.esprit.boukhitcyrine.services.impl;
+package tn.esprit.boukhitcyrine.service.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import tn.esprit.boukhitcyrine.entities.Vehicule;
 import tn.esprit.boukhitcyrine.repository.VehiculeRepository;
-import tn.esprit.boukhitcyrine.services.IVehiculeService;
+import tn.esprit.boukhitcyrine.service.interfaces.IVehiculeService;
 
 import java.util.Set;
 import java.util.HashSet;

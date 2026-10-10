@@ -1,11 +1,11 @@
-package tn.esprit.boukhitcyrine.services.impl;
+package tn.esprit.boukhitcyrine.service.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import tn.esprit.boukhitcyrine.entities.Reservation;
 import tn.esprit.boukhitcyrine.repository.ReservationRepository;
-import tn.esprit.boukhitcyrine.services.IReservationService;
+import tn.esprit.boukhitcyrine.service.interfaces.IReservationService;
 
 import java.util.Set;
 import java.util.HashSet;
